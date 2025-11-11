@@ -1,0 +1,411 @@
+/* Variables para colores */
+:root {
+    --color-primary: #008000; /* Verde COBAED */
+    --color-secondary: #f0f0f0; /* Gris muy claro para contraste */
+    --color-white: #ffffff;
+    --color-text: #333;
+    --color-dark-green: #005f00;
+    --color-alert: #e0b000; /* Amarillo para notas importantes */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-white);
+    line-height: 1.6;
+}
+
+/* Encabezado Principal */
+.main-header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.header-content {
+    position: relative; 
+}
+
+.main-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    border-bottom: 3px solid var(--color-white);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Logo en el Header */
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.logo {
+    width: 80px; 
+    height: auto;
+    background-color: var(--color-white); 
+    padding: 5px;
+    border-radius: 50%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Barra de Navegación */
+.main-nav {
+    background-color: var(--color-dark-green);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav ul li a {
+    display: block;
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 15px 25px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.main-nav ul li a:hover {
+    background-color: var(--color-primary);
+}
+
+/* Estructura del Contenido */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.info-section {
+    padding: 60px 20px;
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+.alternate-bg {
+    background-color: var(--color-secondary); /* Fondo Gris Claro */
+}
+
+.section-title {
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 10px;
+    display: block;
+}
+
+/* Sección HERO (Inicio) */
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta-button .button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button .button:hover {
+    background-color: var(--color-dark-green);
+    transform: scale(1.05);
+}
+
+/* Imagen Promocional (Sección Hero) */
+.promotional-image {
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+    margin: 30px auto;
+    display: block;
+    border: 5px solid var(--color-primary); 
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+/* Grids de Información (Mision/Vision) */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.info-grid article {
+    background-color: var(--color-white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--color-primary); /* Borde verde COBAED */
+}
+
+.info-grid h3 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+/* Listas */
+ul {
+    list-style-position: inside;
+    margin-left: 20px;
+}
+
+/* --- ESTILOS PARA LA SECCIÓN DE HISTORIA --- */
+.historia-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify;
+}
+.citas-historicas {
+    background-color: var(--color-white);
+    padding: 20px;
+    border-left: 5px solid var(--color-dark-green); /* Borde verde oscuro */
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+/* ================================================= */
+/* === ESTILOS PARA CAPACITACIONES (GRID DE BOTONES/TARJETAS) === */
+/* ================================================= */
+
+.capacitaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.capacitacion-card-btn {
+    display: block; 
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text);
+    background-color: var(--color-white); /* Fondo de tarjeta Blanco */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.capacitacion-card-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.capacitacion-img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover; 
+    border-bottom: 3px solid var(--color-primary); /* Línea verde de acento */
+}
+
+.capacitacion-title {
+    color: var(--color-dark-green);
+    padding: 15px 10px;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Estilos para el Contenido Detallado de Capacitaciones */
+.detalle-capacitacion-card {
+    background-color: var(--color-white); /* Fondo de tarjeta Blanco */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    border: 1px solid var(--color-primary); 
+}
+
+.detalle-title {
+    color: var(--color-primary); /* Título en color primario (Verde) */
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+/* ================================================= */
+/* === ESTILOS PARA PARAESCOLARES (BOTONES Y DETALLE) === */
+/* ================================================= */
+
+.paraescolares-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.paraescolar-card {
+    display: block; 
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text);
+    background-color: var(--color-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.detalle-card {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    border: 1px solid var(--color-secondary);
+}
+
+.nota-paraescolar {
+    font-style: italic;
+    color: #666;
+    margin-top: 15px;
+    padding-left: 10px;
+    border-left: 3px solid var(--color-primary);
+}
+
+/* --- ESTILOS PARA INSCRIPCIONES --- */
+.inscripcion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.proceso-card {
+    background-color: var(--color-white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--color-primary);
+}
+
+.button-proceso {
+    display: inline-block;
+    background-color: var(--color-alert);
+    color: var(--color-text);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.nota-importante {
+    color: #a00000;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.requisitos-adicionales {
+    background-color: var(--color-white);
+    padding: 20px;
+    border: 1px dashed var(--color-primary);
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+/* --- ESTILOS PARA HORARIOS, CONTACTO Y FOOTER --- */
+.horarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.horarios-grid article {
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.horarios-grid h3 {
+    color: var(--color-dark-green);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 5px;
+}
+
+.access-button {
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    flex-grow: 1; 
+    max-width: 300px;
+}
+
+.primary-btn {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 2px solid var(--color-primary);
+}
+
+.secondary-btn {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.map-container {
+    margin-top: 30px;
+    height: 400px; 
+    overflow: hidden;
+    border-radius: 15px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-footer {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+    }
+    .logo-container {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .paraescolares-grid, .capacitaciones-grid, .inscripcion-grid {
+        grid-template-columns: 1fr;
+    }
+}
